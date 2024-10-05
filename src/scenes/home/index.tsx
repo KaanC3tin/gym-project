@@ -67,7 +67,7 @@ const Home = ({ setSelectedPage }: Props) => {
                         }
                         }
                     >
-                        <ActionButton>
+                        <ActionButton setSelectedPage={setSelectedPage}>
                             Join Now
                         </ActionButton>
                         <AnchorLink

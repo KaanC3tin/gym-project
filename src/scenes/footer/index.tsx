@@ -1,7 +1,7 @@
 import Logooo from "@/assets/Logooo.png"
-type Props = {}
 
-const Footer = (props: Props) => {
+
+const Footer = () => {
     return (
         <footer className="bg-primary-100 py-16">
             <div className=" mx-auto  gap-16 flex  w-full justify-between px-20"                                                                                                                         >
