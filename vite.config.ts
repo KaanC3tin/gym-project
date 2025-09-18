@@ -10,6 +10,9 @@ export default defineConfig({
     port: 80,
   },
   resolve: {
-    alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }]
-  }
+    alias: [
+      { find: "@", replacement: path.resolve(__dirname, "src") },
+      { find: "gsap", replacement: path.resolve(__dirname, "src/lib/gsapLite") }
+    ],
+  },
 })
