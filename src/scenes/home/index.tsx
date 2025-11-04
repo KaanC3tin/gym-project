@@ -1,4 +1,3 @@
-import useMediaQuery from "@/hooks/useMediaQuery"
 import { SelectedPage } from "@/shared/types"
 import ActionButton from "@/shared/ActionButton"
 import HomePageText from "@/assets/HomePageText.png"
@@ -15,7 +14,7 @@ type Props = {
 
 
 const Home = ({ setSelectedPage }: Props) => {
-    const isAboveMediumScreens = useMediaQuery("(min-width:1060px)")
+    // media query removed - sponsors are now responsive for all screen sizes
     return (
         <section
             id="home"
@@ -86,21 +85,16 @@ const Home = ({ setSelectedPage }: Props) => {
                     <img src={HomePageGraphic} alt="home-page-graphic" />
                 </div>
             </motion.div>
-            {/* SPONSORS */}
-            {
-                isAboveMediumScreens && (
-                    <div className="h-[150px] w-full bg-primary-100 py-10">
-                        <div className=" mx-auto w-5/6">
-                            <div className="flex items-center w-3/5  justify-between gap-12">
-                                <img src={SponsorRedBull} alt="redbull-sponsor" />
-                                <img src={SponsorForbes} alt="Forbes-sponsor" />
-                                <img src={SponsorFortune} alt="Fortune-sponsor" />
-
-                            </div>
-                        </div>
+            {/* SPONSORS - responsive and centered on small screens */}
+            <div className="h-uto w-full bg-primary-100 py-6">
+                <div className="mx-auto w-4/6">
+                    <div className="flex items-center justify-center md:justify-between gap-6 md:gap-12">
+                        <img src={SponsorRedBull} alt="redbull-sponsor" />
+                        <img src={SponsorForbes} alt="Forbes-sponsor" />
+                        <img src={SponsorFortune} alt="Fortune-sponsor" />
                     </div>
-                )
-            }
+                </div>
+            </div>
 
         </section >
     )
